@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+​
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+​
+    <title>Tornado Magnet Explorer!</title>
+​
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+​
+  </head>
+​
+  <body>
+    <!-- Start of navbar -->
+	<div class="navigation">
+	  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">Tornado Magnet Explorer</a>
+        <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+​
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink" role="button" aria-haspopup="true" aria-expanded="false">Explorer      </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/alltornadoes">Tornado v Mobile Homes</a>
+                <a class="dropdown-item" href="/tornadoChart">Tornado Decade Comparison</a>
+                <a class="dropdown-item" href="/tornadoByState">Tornadoes by State</a>
+                <a class="dropdown-item" href="https://www.fema.gov/">FEMA</a>
+              </div>
+            </li>
+            <!-- <li class="nav-item">
+			  <a class="nav-link" href="">                        </a>
+			</li> 
+            <li class="nav-item">
+			  <a class="nav-link" href="">               </a>
+			</li> -->
+          </ul>
+        </div>
+      </nav>
+	</div>
+    <!-- End of navbar -->
+​
+  <!-- Start of container -->
+    <div class="container">
+      <section class="row">
+        <div class="col-lg-7 col-md-12">
+          <div class="description-content">
+            <img src="../static/images/tornado_t_50.png" alt="tornado_drop_cap_T" class="description-image" style="max-width:70px";>
+            <h6>ornadoes, one of Nature’s most violent weather phenomena, hold a special fascination for almost everyone regardless of age. The term “Tornado Magnet” is slang commonly used for mobile homes and mobile home parks. The Department of Homeland Security notes that:
+              “According to the U.S. Census Bureau, 31% of the people that perished in tornadoes between 2009 and 2011 were residing in or fleeing from mobile homes. An inventory of mobile home park locations and the number of mobile homes within those parks is, therefore, essential for emergency preparedness, response, and evacuation.”</h6>
+              <h6>Using Tornado track information from the National Center for Environmental Information (NCEI), and mobile home park information from the Department of Homeland Security, students will be able to explore the relationship between tornadoes, as natural hazard phenomenon, and tornado preparedness. Learning objectives include:
+            <ul>
+              <li>Seasonal trends</li>
+              <li>Tornado severity/intensity</li>
+              <li>Geography of tornado distributions</li>
+              <li>Severe storm preparedness</li>
+            </ul>
+              </h6>
+              <img src="../static/images/twister.gif" alt="tornado_destroyer" class="description-image";>
+          </div>
+          
+        </div>
+        <div class="col-lg-5 col-md-12">
+​
+          <!-- Start of Visualizations imageNav Area -->
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <img src="../static/images/tornado_50.png" alt="tornado_drop_cap_T" class="description-image" style="max-width:70px";>
+              <h2 class="imageNav-header">Explorer</h2>
+              <hr />
+              <div class="container">
+			    <div class="row">
+				  <div class="col-10">
+            <!-- <p><b>Tornadoes and Mobile Home Parks</b></p> -->
+                    <a href="/alltornadoes">
+				      <img src="../static/images/Fig1.png" alt="US Tornadoes & Mobile Homes", title="Tornadoes & Mobile Homes" class="imageNav-photo">
+				    </a>
+				  </div>
+				  <div class="col-10">
+            <!-- <p><b>Comparing Tornadoes by Decade</b></p> -->
+                    <a href="/tornadoChart">
+				      <img src="../static/images/Fig2.png" alt="Tornado Decade Comparison", title="Tornado Decade Comparison" class="imageNav-photo">
+			        </a>
+                    </div>
+				  <div class="col-10">
+            <!-- <p><b>Tornado Frequency</b></p> -->
+                    <a href="/tornadoByState">
+				      <img src="../static/images/Fig3.png" alt="Tornadoes by State", title="Tornadoes by State", class="imageNav-photo">
+				    </a>
+				  </div>
+				  <div class="col-10">
+            <hr>
+            <p><b>Emergency Preparedness Link</b></p>
+                    <a href="https://www.fema.gov/">
+				      <img src="../static/images/Fig4.png" alt="FEMA - Get Prepared", title="FEMA.GOV", class="imageNav-photo">
+				    </a>
+				  </div>
+                </div>
+			  </div>
+            </div>
+          </section>
+          <!-- End of the Explorer imageNav Area -->
+​
+        </div>
+      </section>
+    </div>
+    <!-- End of container -->
+​
+    <!-- Start of footer -->
+    <footer>
+      <div class="footer">&copy; For Educational Purposes Only - All Rights Reserved: 2020</div>
+    </footer>
+    <!-- End of footer -->
+​
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+    <script type="text/javascript" src="../static/js/config.js"></script>
+    <script type="text/javascript" src="../static/js/leaflet-heat.js"></script>
+    <script type="text/javascript" src="../static/js/tornado_heatmap.js"></script>
+  </body>
+​
+</html>
